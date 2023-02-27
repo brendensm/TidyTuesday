@@ -37,3 +37,21 @@ paint_count %>%
         axis.text = element_text(color = "#000000"),
         plot.title = element_text(face = "bold", size = 14))
 
+paint_count %>%
+  ggplot(aes(x= n, y = reorder(colors, n))) +
+  geom_point(col = paint_count$color_hex, size = 5) +
+  geom_segment(
+    aes(x = 0, xend = n, y = colors, yend = colors),
+    linewidth = 1.75,
+    col = paint_count$color_hex
+  )+
+  labs(title = "Most Common Paint Colors Used by Bob Ross",
+       subtitle = "Frequencies of the top 15 colors used in all 31 seasons of 'The Joy of Painting'.",
+       x = "Times used" , y = "Colors",
+       caption = "Visualization by Brenden Smith\nData from TidyTuesday week 8 2023") +
+  theme_grey() +
+  theme(plot.title.position = "plot", plot.background = element_rect("#D2D2D2"),
+        panel.background = element_rect("#D2D2D2"),
+        axis.text = element_text(color = "#000000", size = 10),
+        plot.title = element_text(face = "bold", size = 16),
+        text = element_text(family = "PT Serif"))
