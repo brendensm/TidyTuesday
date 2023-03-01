@@ -1,6 +1,5 @@
 library(tidyverse)
 library(tidytuesdayR)
-library(fmsb)
 library(ggradar)
 
 tuesdata <- tt_load(2023, week = 9)
