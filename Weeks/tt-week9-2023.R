@@ -37,7 +37,7 @@ gg_rad %>%
           ) + 
   labs(title = "African Language Tweet Sentiment Analysis",
        subtitle = "Sentiment comparison from a sample of over 111,000 tweets \nin 14 different African Languages.",
-       caption = "Visualization by Brenden Smith\nData from Afriseniti\nTidyTuesday week 9, 2023") +
+       caption = "Visualization by Brenden Smith\nData from Afrisenti\nTidyTuesday week 9, 2023") +
   theme(plot.title = element_text(size = 20, face = "bold"),
         plot.subtitle = element_text(size = 12), plot.caption = element_text(size = 8),
                     text = element_text(family = "Optima"), plot.title.position = "plot")
