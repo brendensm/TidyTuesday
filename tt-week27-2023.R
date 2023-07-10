@@ -83,7 +83,7 @@ mi_county %>%
              inherit.aes = FALSE, size = .01, color = "white") +
   labs(title = "Historical Markers in Michigan",
        caption = "Viz: Brenden Smith \nData: www.hmdb.org\nTidyTuesday Week 27, 2023") +
-  annotate("text", x = -95, y = 43.75, label = "\n\nAs of 2022, Michigan has 1844 historical\nmarkers. Compared to other states, Michigan\nranks eighth in number of historical markers.\nMost markers are currently in Wayne,\nOakland, and Washtenaw Counties. \n\nThree Counties currently have no historical\nmarkers: Ontonagon, Missauki, and Gladwin.", 
+  annotate("text", x = -95, y = 43.75, label = "\n\nMichigan has 1844 historical markers.\nCompared to other states, Michigan ranks\neighth in number of historical markers.\nMost markers are currently in Wayne,\nOakland, and Washtenaw Counties. \n\nThree Counties currently have no historical\nmarkers: Ontonagon, Missauki, and Gladwin.", 
                     colour = "white",
            family = "Georgia", hjust = "left", lineheight = 1, size = 4.5) +
   theme_map() +
