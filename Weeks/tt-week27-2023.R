@@ -67,12 +67,6 @@ hist_mi %>%
   
 
 library(cowplot)
-
-
-
-mimg <- readPNG("mibar.png")
-
-plot_grid(mi_map, mi_bar, rel_widths = c(1, .75))
 library(ggtext)
 
 mi_county %>%
@@ -80,7 +74,7 @@ mi_county %>%
              group = group))+
   geom_polygon(colour = alpha("gray40", 1/2), fill = "black") +
   geom_point(data = hist_mi, aes(longitude_minus_w, latitude_minus_s),
-             inherit.aes = FALSE, size = .01, color = "white") +
+             inherit.aes = FALSE, size = .01, color = "white", alpha = .5) +
   labs(title = "Historical Markers in Michigan",
        caption = "Viz: Brenden Smith \nData: www.hmdb.org\nTidyTuesday Week 27, 2023") +
   annotate("text", x = -95, y = 43.75, label = "\n\nMichigan has 1844 historical markers.\nCompared to other states, Michigan ranks\neighth in number of historical markers.\nMost markers are currently in Wayne,\nOakland, and Washtenaw Counties. \n\nThree Counties currently have no historical\nmarkers: Ontonagon, Missauki, and Gladwin.", 
