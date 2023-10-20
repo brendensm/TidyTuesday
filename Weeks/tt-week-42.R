@@ -47,18 +47,7 @@ taylor_albums %>%
   ggplot(aes(user_score, reorder(album_name, album_release), fill = album_name)) +
   geom_bar(stat = "identity")
 
-# Read in album artwork
 
-mypath = "images/tswift/" #file where the images are
-files <- list.files(path=mypath, pattern=".jpg$")
-length(files)
-
-for (i in files){
-  im <- magick::image_read(paste0(mypath, i))
-  im.convert <- as.vector(im)
-  out <- as.data.frame(do.call(rbind, im.convert)) # create a data frame
-  return(out)
-}
 
 
 
@@ -126,7 +115,7 @@ taylor_albums %>%
        caption = "Brenden Smith | Data: taylor R package | Metacritic score is divided by 10 to comapre with user scores.") +
   theme(legend.position = "none",
         plot.title.position = "plot",
-      plot.title = element_text(size = 26),
+      plot.title = element_text(size = 26, face = "bold"),
         plot.subtitle = ggtext::element_markdown(size = 18),
       plot.background = element_rect(fill = "#FFFFEB"),
       plot.caption = element_text(size = 12, family = "PT Serif Caption"),
