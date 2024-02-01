@@ -112,7 +112,7 @@ taylor_albums %>%
   labs(title = "Taylor Swift Album Ratings",
        x = "", y = "",
        subtitle = title_text,
-       caption = "Brenden Smith | Data: taylor R package | Metacritic score is divided by 10 to comapre with user scores.") +
+       caption = "Brenden Smith | Data: taylor R package | Metacritic score is divided by 10 to compare with user scores.") +
   theme(legend.position = "none",
         plot.title.position = "plot",
       plot.title = element_text(size = 26, face = "bold"),
